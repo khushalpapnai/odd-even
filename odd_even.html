@@ -1,99 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Odd or Even Checker</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    input[type="number"] {
-      padding: 8px;
-      font-size: 16px;
-      width: 200px;
-      margin-bottom: 10px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      background: #004080;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #003366;
-    }
-    #result {
-      margin-top: 15px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Odd or Even Checker</h1>
-    <input type="number" id="numberInput" placeholder="Enter a number">
-    <br>
-    <button onclick="checkOddEven()">Check</button>
-    <div id="result"></div>
-  </div>
-  
-  <script>
-    function checkOddEven() {
-      var input = document.getElementById('numberInput').value;
-      var num = parseInt(input);
-      var resultDiv = document.getElementById('result');
-      
-  
- <script>
-  function checkOddEven() {
-    var input = document.getElementById('numberInput').value;
-    var num = parseInt(input);
-    var resultDiv = document.getElementById('result');
-
-    if (isNaN(num)) {
-      resultDiv.textContent = 'Please enter a valid number.';
-      resultDiv.style.color = 'red';
-      return;
-    }
-
-    if (num === 0) {
-      resultDiv.textContent = 'The number ' + num + ' is zero.';
-      resultDiv.style.color = 'grey';
-    } else if (num < 0) {
-      resultDiv.textContent = 'The number ' + num + ' is negative.';
-      resultDiv.style.color = 'red';
-    } else {
-      if (num % 2 === 0) {
-        resultDiv.textContent = 'The number ' + num + ' is even.';
-        resultDiv.style.color = 'green';
-      } else {
-        resultDiv.textContent = 'The number ' + num + ' is odd.';
-        resultDiv.style.color = 'blue';
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odd or Even Checker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
       }
-    }
-  }
-</script>
+      .container {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      input[type="number"] {
+        padding: 8px;
+        font-size: 16px;
+        width: 200px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background: #004080;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #003366;
+      }
+      #result {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Odd or Even Checker</h1>
+      <input type="number" id="numberInput" placeholder="Enter a number" />
+      <br />
+      <button onclick="checkOddEven()">Check</button>
+      <div id="result"></div>
+    </div>
 
+    <script>
+      function checkOddEven() {
+        var input = document.getElementById("numberInput").value;
+        var num = parseInt(input);
+        var resultDiv = document.getElementById("result");
 
-
-  </script>
-</body>
+        if (isNaN(num)) {
+          resultDiv.textContent = "Please enter a valid number.";
+          resultDiv.style.color = "red";
+          return;
+        }
+        if (num === 0) {
+          resultDiv.textContent = "The number " + num + " is zero.";
+          resultDiv.style.color = "grey";
+        } else {
+          if (num < 0) {
+            resultDiv.textContent = "The number " + num + " is negative.";
+            resultDiv.style.color = "brown";
+          } else {
+            if (num % 2 === 0) {
+              resultDiv.textContent = "The number " + num + " is even.";
+              resultDiv.style.color = "green";
+            } else {
+              resultDiv.textContent = "The number " + num + " is odd.";
+              resultDiv.style.color = "blue";
+            }
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
