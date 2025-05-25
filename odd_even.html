@@ -69,14 +69,21 @@
       if(num===0){
         resultDiv.textContent = 'The number ' + num + ' is zero.';
         resultDiv.style.color = 'grey';
-      }else{
+      }
+      else{
+      if(numm<0){
+        resultDiv.textContent = 'The number ' + num + ' is negative.';
+        resultDiv.style.color = 'red';
+        }
+      else{
       if (num % 2 === 0) {
         resultDiv.textContent = 'The number ' + num + ' is even.';
         resultDiv.style.color = 'green';
-      } else {
+      } 
+      else {
         resultDiv.textContent = 'The number ' + num + ' is odd.';
         resultDiv.style.color = 'blue';
-      }
+      }}
       }
     }
   </script>
