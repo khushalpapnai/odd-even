@@ -61,31 +61,30 @@
       var num = parseInt(input);
       var resultDiv = document.getElementById('result');
       
-      if (isNaN(num)) {
-        resultDiv.textContent = 'Please enter a valid number.';
-        resultDiv.style.color = 'red';
-        return;
-      }
-      if(num===0){
-        resultDiv.textContent = 'The number ' + num + ' is zero.';
-        resultDiv.style.color = 'grey';
-      }
-      else{
-      if(numm<0){
-        resultDiv.textContent = 'The number ' + num + ' is negative.';
-        resultDiv.style.color = 'red';
-        }
-      else{
-      if (num % 2 === 0) {
-        resultDiv.textContent = 'The number ' + num + ' is even.';
-        resultDiv.style.color = 'green';
-      } 
-      else {
-        resultDiv.textContent = 'The number ' + num + ' is odd.';
-        resultDiv.style.color = 'blue';
-      }}
-      }
+  
+  if (isNaN(num)) {
+    resultDiv.textContent = 'Please enter a valid number.';
+    resultDiv.style.color = 'red';
+    return;
+  }
+
+  if (num === 0) {
+    resultDiv.textContent = 'The number ' + num + ' is zero.';
+    resultDiv.style.color = 'grey';
+  } else if (num < 0) {
+    resultDiv.textContent = 'The number ' + num + ' is negative.';
+    resultDiv.style.color = 'red';
+  } else {
+    if (num % 2 === 0) {
+      resultDiv.textContent = 'The number ' + num + ' is even.';
+      resultDiv.style.color = 'green';
+    } else {
+      resultDiv.textContent = 'The number ' + num + ' is odd.';
+      resultDiv.style.color = 'blue';
     }
+  }
+
+
   </script>
 </body>
 </html>
